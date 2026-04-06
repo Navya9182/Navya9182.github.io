@@ -1,0 +1,107 @@
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Page fade‑in */
+body {
+  opacity: 0;
+  animation: fadeIn 0.8s forwards ease;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff3e0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: #ff5722;
+  padding: 10px;
+}
+.navbar a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.search-container {
+  margin: 20px auto;
+}
+#searchInput {
+  padding: 10px;
+  width: 280px;
+  border: 2px solid #ff5722;
+  border-radius: 20px;
+}
+
+/* Carousel */
+.carousel-container {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.pizza-slide {
+  flex: 0 0 300px;
+  margin: 0 10px;
+  text-align: center;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.pizza-slide img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 40%;
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+}
+#prevBtn { left: 5px; }
+#nextBtn { right: 5px; }
+
+/* Buttons */
+button {
+  background: #ff5722;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  transform: scale(1.05);
+}
+
+input {
+  padding: 10px;
+  width: 220px;
+  margin-bottom: 10px;
+}
+
+/* UPI QR */
+#payqr img {
+  margin-top: 10px;
+  border: 3px solid #ff5722;
+  border-radius: 12px;
+}

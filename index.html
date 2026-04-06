@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>🍕 Pizza Order Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="#slider">Menu</a>
+  <a href="#cart">Cart</a>
+  <a href="#order">Order</a>
+  <a href="#payqr">Pay QR</a>
+</nav>
+
+<h1 class="fade-in">🍕 Global Pizza Gallery</h1>
+
+<section id="slider" class="carousel-container fade-in">
+  <button id="prevBtn" class="slider-btn">❮</button>
+  <div class="carousel-slide">
+    <!-- 25 Pizza Slides (image URLs are example sources) -->
+    <div class="pizza-slide" data-name="Margherita">
+      <img src="https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg" alt="Margherita Pizza">
+      <h3>Margherita</h3><p>₹150</p>
+      <button onclick="addToCart('Margherita',150)">Add</button>
+    </div>
+    <div class="pizza-slide" data-name="Pepperoni">
+      <img src="https://images.pexels.com/photos/1580464/pexels-photo-1580464.jpeg" alt="Pepperoni Pizza">
+      <h3>Pepperoni</h3><p>₹190</p>
+      <button onclick="addToCart('Pepperoni',190)">Add</button>
+    </div>
+    <div class="pizza-slide" data-name="BBQ Chicken">
+      <img src="https://images.pexels.com/photos/2232/vegetables-italian-pizza-restaurant.jpg" alt="BBQ Chicken Pizza">
+      <h3>BBQ Chicken</h3><p>₹210</p>
+      <button onclick="addToCart('BBQ Chicken',210)">Add</button>
+    </div>
+    <!-- Add 22 more pizzas with unique names + images -->
+    <div class="pizza-slide" data-name="Hawaiian">
+      <img src="https://th.bing.com/th/id/OIP.cPPN_prQfFmjXtPQ2qCZGQHaEJ?w=303&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Hawaiian Pizza">
+      <h3>Hawaiian</h3><p>₹200</p><button onclick="addToCart('Hawaiian',200)">Add</button>
+    </div>
+    <div class="pizza-slide" data-name="Four Cheese">
+      <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg" alt="Four Cheese Pizza">
+      <h3>Four Cheese</h3><p>₹230</p><button onclick="addToCart('Four Cheese',230)">Add</button>
+    </div>
+    <div class="pizza-slide" data-name="Veggie Supreme">
+      <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg" alt="Veggie Supreme Pizza">
+      <h3>Veggie Supreme</h3><p>₹180</p><button onclick="addToCart('Veggie Supreme',180)">Add</button>
+    </div>
+    <div class="pizza-slide" data-name="Meat Lovers">
+      <img src="https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg" alt="Meat Lovers Pizza">
+      <h3>Meat Lovers</h3><p>₹260</p><button onclick="addToCart('Meat Lovers',260)">Add</button>
+    </div>
+    <div class="pizza-slide" data-name="Sicilian">
+      <img src="https://images.pexels.com/photos/3872372/pexels-photo-3872372.jpeg" alt="Sicilian Pizza">
+      <h3>Sicilian</h3><p>₹220</p><button onclick="addToCart('Sicilian',220)">Add</button>
+    </div>
+    <div class="pizza-slide" data-name="Neapolitan">
+      <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg" alt="Neapolitan Pizza">
+      <h3>Neapolitan</h3><p>₹200</p><button onclick="addToCart('Neapolitan',200)">Add</button>
+    </div>
+    <div class="pizza-slide" data-name="Mexican">
+      <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Mexican Pizza">
+      <h3>Mexican</h3><p>₹210</p><button onclick="addToCart('Mexican',210)">Add</button>
+    </div>
+    <!-- Continue adding up to 25 -->
+  </div>
+  <button id="nextBtn" class="slider-btn">❯</button>
+</section>
+
+<section id="cart" class="fade-in">
+  <h2>🛒 Cart</h2>
+  <ul id="cartList"></ul>
+  <h3>Total: ₹<span id="totalPrice">0</span></h3>
+</section>
+
+<section id="order" class="fade-in">
+  <h2>📦 Order Details</h2>
+  <input type="text" id="name" placeholder="Your Name"><br><br>
+  <input type="text" id="address" placeholder="Your Address"><br><br>
+  <button onclick="placeOrder()">Place Order</button>
+</section>
+
+<section id="payqr" class="fade-in">
+  <h2>📲 UPI Payment QR (Sample)</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/UPI_QR_Code.png/240px-UPI_QR_Code.png" alt="UPI QR Code">
+  <p>Scan with any UPI app and enter the total amount manually.</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
